@@ -5,12 +5,16 @@ LABEL maintainer="Daileyo <dale13@gmail.com>"
 RUN yum -y update
 RUN yum -y install vim
 RUN yum -y install httpd
+RUN yum -y install mod_ssl
 RUN yum clean all
 #############################################################################################################
 FROM revprox
 #  Stage 2
 # where to work from. Helpful for docker exec use
 WORKDIR /etc/httpd/conf.d
+COPY ./custom-errors/* /var/www/html/errors/
+COPY ./config/*.conf /etc/httpd/conf.d/
+COPY ./index.html /var/www/html/
 EXPOSE 80
 EXPOSE 443
 ADD start-httpd.sh /start-httpd.sh

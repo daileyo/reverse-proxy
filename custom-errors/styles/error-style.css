@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+
+
+  font-family: lato;
+}
+.error-404 {background-image: url("/errors/404.png");}
+.error-503 {background-image: url("/errors/503.png");}
+
+.error {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  max-width: 500px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+
+  background-color:rgba(153,153,153, 0.9);
+  border-radius: 50%;
+}
+
+.error-graphic {
+  display: flex;
+
+  width: 140px;
+  height: 140px;
+  
+  
+  background-image: url('/errors/oh-beard-0001.png');
+  background-position: center;
+  background-size: cover;
+  
+}
+.error-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+  max-width: 70%;
+}
+
+.error h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  max-width: 80%;
+  color: rgba(0 ,0 ,0, 1);
+  text-transform: uppercase;
+}
+
+.error h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  max-width: 70%;
+  color: rgba(0 ,0 ,0, 1);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.error p {
+  font-family: 'Lato', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: rgba(250, 250, 250, 1);
+  font-weight: 400;
+}
+
+.error a {
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  font-weight: 700px;
+  font-size: 30px;
+
+  text-decoration: none;
+  color: rgba(90,90,90, 1);
+}
+
+@media only screen and (max-width: 767px) {
+  .error {
+    width: 180px;
+    height: 180px;
+  }
+  .error {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 110px;
+  }
+}
