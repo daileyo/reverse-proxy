@@ -12,9 +12,9 @@ FROM revprox
 #  Stage 2
 # where to work from. Helpful for docker exec use
 WORKDIR /etc/httpd/conf.d
-COPY ./custom-errors/* /var/www/html/errors/
-COPY ./config/dev-*.conf /etc/httpd/conf.d/ 
+COPY ./config/prod*.conf /etc/httpd/conf.d/
 COPY ./config/ssl.conf /etc/httpd/conf.d/
+COPY ./custom-errors/* /var/www/html/errors/
 COPY ./index.html /var/www/html/
 EXPOSE 80
 EXPOSE 443
